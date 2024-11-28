@@ -1,26 +1,27 @@
 public class Triangle {
-    static double side1 = 3;
-    static double side2 = 4;
-    static double side3 = 5;
 
-    public Triangle(double side1, double side2, double side3) {
-        Triangle.side1 = side1;
-        Triangle.side2 = side2;
-        Triangle.side3 = side3;
+    static void TriangleArea(double a, double b, double c) {
+        var text = String.format("Площадь трегольника со сторонами %f и %f и %f = %f", a, b, c, triangleArea(a, b, c));
+        System.out.println(text);
     }
 
-    public static double getArea() {
-        double s = (side1 + side2 + side3) / 2;
-        return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+    static double triangleArea(double a, double b, double c) {
+        double s = a + b + c / 2;
+        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
     }
 
-    public static double getPerimeter() {
-        return side1 + side2 + side3;
+    static void TrianglePerimeter(double a, double b, double c) {
+        var text = String.format("Периметер трегольника со сторонами %f и %f и %f = %f", a, b, c, trianglePerimeter(a, b, c));
+        System.out.println(text);
+    }
+
+    static double trianglePerimeter(double a, double b, double c) {
+        return a + b + c;
     }
 
     public static void main(String[] args) {
-        System.out.println("Площадь треугольника = " + Triangle.getArea());
-        System.out.println("Периметр треугольника по трём сторонам = " + Triangle.getPerimeter());
+        Triangle.TriangleArea(3., 4., 5.);
+        Triangle.TrianglePerimeter(3., 4., 5.);
     }
-}
 
+}
