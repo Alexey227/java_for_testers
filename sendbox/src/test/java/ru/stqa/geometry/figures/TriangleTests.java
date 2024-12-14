@@ -9,7 +9,7 @@ public class TriangleTests {
     void canCalculateArea() {
         var a = new Triangle(3.,4.,5.);
         double result;
-        result = a.Area();
+        result = a.area();
         Assertions.assertEquals(6.,result);
     }
 
@@ -17,7 +17,7 @@ public class TriangleTests {
     void canCalculatePerimeter() {
         var b = new Triangle(1,1,1);
         double result;
-        result = b.Perimeter();
+        result = b.perimeter();
         Assertions.assertEquals(3,result);
     }
 }
