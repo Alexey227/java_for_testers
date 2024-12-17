@@ -24,7 +24,7 @@ public record Triangle(double side1, double side2, double side3) {
 
     //метод вычисления площади
     public double area() {
-        double s = (this.side1 + this.side2 + this.side3) / 2;
+        double s = perimeter() / 2;
         return Math.sqrt(s * (s - this.side1) * (s - this.side2) * (s - this.side3));
     }
 
