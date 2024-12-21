@@ -7,17 +7,37 @@ public class TriangleTests {
 
     @Test
     void canCalculateArea() {
-        var a = new Triangle(3.,4.,5.);
+        var a = new Triangle(3., 4., 5.);
         double result;
         result = a.area();
-        Assertions.assertEquals(6.,result);
+        Assertions.assertEquals(6., result);
     }
 
     @Test
     void canCalculatePerimeter() {
-        var b = new Triangle(1,1,1);
+        var b = new Triangle(1, 1, 1);
         double result;
         result = b.perimeter();
-        Assertions.assertEquals(3,result);
+        Assertions.assertEquals(3, result);
+    }
+
+    @Test
+    void cannotCreateTriangleWithNegativeSide() {
+        try {
+            new Triangle(-1.,1.,1);
+            Assertions.fail();
+        } catch (IllegalArgumentException exception) {
+            //ок
+        }
+    }
+
+    @Test
+    void cannotCreateTriangleWithSideInequality() {
+        try {
+            new Triangle(1,1,3);
+            Assertions.fail();
+        } catch (IllegalArgumentException exception) {
+            //ок
+        }
     }
 }
