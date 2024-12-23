@@ -40,4 +40,11 @@ public class TriangleTests {
             //ок
         }
     }
+
+    @Test
+    void testEQualityTriangle() {
+        var t1 = new Triangle (3.,4.,5.);
+        var t2 = new Triangle(4.,5.,3.);
+        Assertions.assertTrue(t1.equals(t2));
+    }
 }

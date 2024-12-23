@@ -1,5 +1,7 @@
 package ru.stqa.geometry.figures;
 
+import java.util.Objects;
+
 import static java.lang.Math.sqrt;
 
 //Класс треугольника содержит 3 поля
@@ -46,5 +48,18 @@ public record Triangle(double side1, double side2, double side3) {
 
     public double perimeter() {
         return (this.side1 + this.side2 + this.side3);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Triangle triangle = (Triangle) o;
+        return (Double.compare(side1, this.side1) == 0 && Double.compare(side2, this.side2) == 0 && Double.compare(side3, this.side3) == 0)
+               || (Double.compare(side1, this.side2) == 0 && Double.compare(side2, this.side3) == 0 && Double.compare(side3, this.side2) == 0) ;
+    }
+
+    @Override
+    public int hashCode() {
+        return 1;
     }
 }
