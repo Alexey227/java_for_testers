@@ -15,7 +15,7 @@ public record Triangle(double side1, double side2, double side3) {
         if (side1 < 0 || side2 < 0 || side3 < 0) {
             throw new IllegalArgumentException("Triangle side should be non-negative");
         }
-        if ( side1 + side2 < side3 || side1 + side3 < side2 || side2 + side3 < side1 ) {
+        if (side1 + side2 < side3 || side1 + side3 < side2 || side2 + side3 < side1) {
             throw new IllegalArgumentException("Triangle side inequality negative");
         }
     }
@@ -54,9 +54,12 @@ public record Triangle(double side1, double side2, double side3) {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Triangle triangle = (Triangle) o;
-        return (Double.compare(triangle.side1, this.side1) == 0 && Double.compare(triangle.side2, this.side2) == 0 && Double.compare(triangle.side3, this.side3) == 0)
-               || (Double.compare(side1, this.side2) == 0 && Double.compare(side2, this.side3) == 0 && Double.compare(side3, this.side1) == 0)
-               || (Double.compare(side1, this.side3) == 0 && Double.compare(side2, this.side1) == 0 && Double.compare(side3, this.side2) == 0) ;
+        return Double.compare(triangle.side1, this.side1) == 0 && Double.compare(triangle.side2, this.side2) == 0 && Double.compare(triangle.side3, this.side3) == 0
+                || (Double.compare(triangle.side1, this.side1) == 0 && Double.compare(triangle.side2, this.side3) == 0 && Double.compare(triangle.side3, this.side2) == 0)
+                || (Double.compare(triangle.side1, this.side2) == 0 && Double.compare(triangle.side2, this.side1) == 0 && Double.compare(triangle.side3, this.side3) == 0)
+                || (Double.compare(triangle.side1, this.side2) == 0 && Double.compare(triangle.side2, this.side3) == 0 && Double.compare(triangle.side3, this.side1) == 0)
+                || (Double.compare(triangle.side1, this.side3) == 0 && Double.compare(triangle.side2, this.side1) == 0 && Double.compare(triangle.side3, this.side2) == 0)
+                || (Double.compare(triangle.side1, this.side3) == 0 && Double.compare(triangle.side2, this.side2) == 0 && Double.compare(triangle.side3, this.side1) == 0);
     }
 
     @Override
