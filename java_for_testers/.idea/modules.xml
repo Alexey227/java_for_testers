@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/addressbook_web_test.iml" filepath="$PROJECT_DIR$/addressbook_web_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook_web_test.main.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook_web_test.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook_web_test.test.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook_web_test.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/sendbox.iml" filepath="$PROJECT_DIR$/sendbox.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sendbox.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sendbox.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sendbox.test.iml" filepath="$PROJECT_DIR$/.idea/modules/sendbox.test.iml" />
